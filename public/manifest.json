@@ -1,8 +1,8 @@
 {
-  "name": "Skeleton Layout",
+  "name": "Confetti Generator",
   "code": "plugin.js",
   "icon": "content/icon.png",
-  "description": "Convert your Penpot designs into a low-fidelity concepts",
+  "description": "Generate confetti for your Penpot designs",
   "permissions": [
     "content:read",
     "content:write"

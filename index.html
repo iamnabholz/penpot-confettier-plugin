@@ -8,17 +8,28 @@
 </head>
 
 <body>
-  <p>Penpot plugin starter template</p>
+  <main>
+    <section class="rows">
+      <label for="height">
+        Canvas height
+        <input min="60" class="input" type="number" placeholder="height" id="height" value="60" />
+      </label>
 
-  <p>
-    Checkout the
-    <a target="_blank" href="https://help.penpot.app/plugins/">documentation</a>
-    to get started.
-  </p>
+      <label for="width">
+        Canvas width
+        <input min="60" class="input" type="number" placeholder="width" id="width" value="60" />
+      </label>
+    </section>
 
-  <button type="button" data-appearance="primary" data-handler="create-text">
-    Create text
-  </button>
+    <button type="button" data-appearance="primary" data-handler="generate-confetti">
+      Generate Confetti
+    </button>
+
+    <label>
+      If no shape is selected the 'Canvas height' and 'Canvas width' inputs are used for the size
+    </label>
+  </main>
+
 
   <script type="module" src="/src/main.ts"></script>
 </body>

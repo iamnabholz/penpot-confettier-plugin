@@ -4,27 +4,23 @@ penpot.ui.open("Confettier", `?theme=${penpot.theme}`, {
 });
 
 const createConfetti = (width: number, height: number) => {
-  // Added preserveAspectRatio to maintain proportions
   const svgHeader = `<svg viewBox="0 0 ${width} ${height}" 
     xmlns="http://www.w3.org/stg" preserveAspectRatio="xMidYMid meet">`;
 
   let confettiElements = '';
-  const confettiCount = 20 + Math.random() * 30;
+  const confettiCount = 25 + Math.random() * 30;
 
   for (let particleIndex = 0; particleIndex < confettiCount; particleIndex++) {
-    const particleSize = 4 + Math.random() * 8;
+    const particleSize = 2 + Math.random() * 9;
     const positionX = Math.random() * width;
     const positionY = Math.random() * height;
 
     // Multiple rotation angles for 3D-like effect
-    //const rotationX = Math.random() * 360;
-    //const rotationY = Math.random() * 360;
-    const rotationZ = Math.random() * 360;
-    const skewX = Math.random() * 20 - 10; // Random skew between -10 and 10
-    const skewY = Math.random() * 20 - 10;
+    const rotation = Math.random() * 360;
+    const skewX = Math.random() * 30 - 15;
+    const skewY = Math.random() * 30 - 15;
     const particleColor = `hsl(${Math.random() * 360}, 70%, 50%)`;
 
-    // Combined transforms for 3D-like effect
     const confettiPiece = `<rect 
       x="${positionX}" 
       y="${positionY}" 
@@ -36,7 +32,7 @@ const createConfetti = (width: number, height: number) => {
         scale(${0.7 + Math.random() * 0.6})
         skewX(${skewX})
         skewY(${skewY})
-        rotate(${rotationZ})
+        rotate(${rotation})
         translate(${-(positionX + particleSize / 2)} ${-(positionY + particleSize / 2)})
       "
       style="opacity: ${0.7 + Math.random() * 0.3}"

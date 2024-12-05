@@ -17,8 +17,8 @@ const createConfetti = (width: number, height: number) => {
     const positionY = Math.random() * height;
 
     // Multiple rotation angles for 3D-like effect
-    const rotationX = Math.random() * 360;
-    const rotationY = Math.random() * 360;
+    //const rotationX = Math.random() * 360;
+    //const rotationY = Math.random() * 360;
     const rotationZ = Math.random() * 360;
     const skewX = Math.random() * 20 - 10; // Random skew between -10 and 10
     const skewY = Math.random() * 20 - 10;

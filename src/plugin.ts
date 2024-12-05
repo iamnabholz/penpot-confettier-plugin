@@ -48,14 +48,15 @@ const createConfetti = (width: number, height: number) => {
 }
 
 const createGroupShape = (width: number, height: number, x: number, y: number) => {
-  const create = penpot.createShapeFromSvg(createConfetti(width, height));
+  const shapeGroup = penpot.createShapeFromSvg(createConfetti(width, height));
 
-  if (create) {
-    penpot.flatten(create.children);
-    create.x = x;
-    create.y = y;
+  if (shapeGroup) {
+    shapeGroup.name = `confetti ${width}px by ${height}px`;
+    penpot.flatten(shapeGroup.children);
+    shapeGroup.x = x;
+    shapeGroup.y = y;
 
-    penpot.selection = [create];
+    penpot.selection = [shapeGroup];
   }
 }
 

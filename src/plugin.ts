@@ -5,13 +5,7 @@ penpot.ui.open("Confettier", `?theme=${penpot.theme}`, {
 
 const createConfetti = (width: number, height: number) => {
   const svgHeader = `<svg viewBox="0 0 ${width} ${height}" 
-    xmlns="http://www.w3.org/stg" preserveAspectRatio="xMidYMid meet">
-    <defs>
-      <clipPath id="clip">
-        <rect x="0" y="0" width="${width}" height="${height}" />
-      </clipPath>
-    </defs>
-    <g clip-path="url(#clip)">`;
+    xmlns="http://www.w3.org/stg" preserveAspectRatio="xMidYMid meet">`;
 
   let confettiElements = '';
   const confettiCount = 25 + Math.random() * 30;
@@ -47,7 +41,7 @@ const createConfetti = (width: number, height: number) => {
     confettiElements += confettiPiece;
   }
 
-  const svgFooter = '</g></svg>';
+  const svgFooter = '</svg>';
   const completeSvg = svgHeader + confettiElements + svgFooter;
 
   return completeSvg;

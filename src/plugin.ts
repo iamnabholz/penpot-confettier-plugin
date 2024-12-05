@@ -4,8 +4,8 @@ penpot.ui.open("Confettier", `?theme=${penpot.theme}`, {
 });
 
 const createConfetti = (width: number, height: number) => {
-  const svgHeader = `<svg viewBox="0 0 ${width} ${height}" 
-    xmlns="http://www.w3.org/stg" preserveAspectRatio="xMidYMid meet">`;
+  const svgHeader = `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" 
+    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">`;
 
   let confettiElements = '';
   const confettiCount = 25 + Math.random() * 30;
@@ -53,6 +53,7 @@ const createGroupShape = (width: number, height: number, x: number, y: number) =
   if (shapeGroup) {
     shapeGroup.name = `confetti ${width}px by ${height}px`;
     penpot.flatten(shapeGroup.children);
+    shapeGroup.resize(Number(width), Number(height));
     shapeGroup.x = x;
     shapeGroup.y = y;
 

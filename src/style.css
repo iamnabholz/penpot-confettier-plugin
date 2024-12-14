@@ -29,7 +29,8 @@ label {
     font-size: 14px;
 }
 
-input {
+input,
+select {
     margin-top: 4px;
     width: 100%;
 }
@@ -46,7 +47,7 @@ input {
 
 .choice-selector p {
     text-align: center;
-    padding: 8px 0;
+    padding: 10px 0;
     border-radius: var(--spacing-8);
     cursor: pointer;
 }
